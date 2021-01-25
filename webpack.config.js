@@ -1,5 +1,6 @@
 const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const { resolve } = require('path');
 
 module.exports = {
     entry: './src/index.js',
@@ -24,9 +25,9 @@ module.exports = {
     plugins: [
         new htmlWebpackPlugin([
             {
-                inject: true,
-                template: './public/index.html',
-                filename:'./index.html',
+                
+                template: path.resolve(__dirname, '/public/index.html'),
+                title: "Cientifico"
             }
         ])
     ]
