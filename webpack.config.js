@@ -1,6 +1,6 @@
 const path = require('path');
-const htmlWebpackPlugin = require('html-webpack-plugin');
-const { resolve } = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 module.exports = {
     entry: './src/index.js',
@@ -23,12 +23,11 @@ module.exports = {
         ]
     },
     plugins: [
-        new htmlWebpackPlugin([
+        new HtmlWebpackPlugin(
             {
-                
-                template: path.resolve(__dirname, '/public/index.html'),
+                template: './public/index.html',
                 title: "Cientifico"
             }
-        ])
+        )
     ]
 }
