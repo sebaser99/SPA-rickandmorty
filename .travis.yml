@@ -12,7 +12,7 @@ deploy:
   provider: pages
   edge: true
   skip-cleanup: true
-  github-token: 
+  github-token: $GITHUB_TOKEN
   local-dir: dist/
   targe-branch: gh-pages
   commit_message: "Deploy Release"
